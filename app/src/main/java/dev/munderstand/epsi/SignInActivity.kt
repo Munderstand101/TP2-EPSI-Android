@@ -15,10 +15,11 @@ class SignInActivity : BaseActivity() {
 
 
         setHeaderTxt("Création de compte")
+        showBack()
 
         buttonQrCodeScan.setOnClickListener(View.OnClickListener {
-            //val intent = Intent(application, InfoStudentActivity::class.java)
-            //  startActivity(intent)
+            val intent = Intent(application, QrCodeScanActivity::class.java)
+              startActivity(intent)
         })
 
         buttonRegistrationButton.setOnClickListener(View.OnClickListener {
