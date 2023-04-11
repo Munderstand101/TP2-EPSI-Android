@@ -24,4 +24,10 @@
         <item name="android:layout_gravity">center_horizontal</item>
         <item name="android:layout_marginTop">50dp</item>
     </style>
+    <style name="Theme.EPSIAndroid.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+    <style name="Theme.EPSIAndroid.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="Theme.EPSIAndroid.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 </resources>

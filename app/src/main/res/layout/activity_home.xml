@@ -13,5 +13,32 @@
         android:layout_height="wrap_content" />
 
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/carteButton"
+            style="@style/Project_Button"
+            android:text="Cartes"
+            tools:layout_editor_absoluteX="133dp"
+            tools:layout_editor_absoluteY="200dp" />
+
+        <Button
+            android:id="@+id/offerButton"
+            style="@style/Project_Button"
+            android:text="Offres "
+            tools:layout_editor_absoluteX="133dp"
+            tools:layout_editor_absoluteY="433dp" />
+
+        <Button
+            android:id="@+id/storeButton"
+            style="@style/Project_Button"
+            android:text="Magasins "
+            tools:layout_editor_absoluteX="133dp"
+            tools:layout_editor_absoluteY="433dp" />
+    </LinearLayout>
+
 
 </LinearLayout>
