@@ -3,9 +3,9 @@ package dev.munderstand.epsi
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 
-class splash_activity : AppCompatActivity() {
+class SignInActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_splash)
+        setContentView(R.layout.activity_sign_in)
     }
 }
