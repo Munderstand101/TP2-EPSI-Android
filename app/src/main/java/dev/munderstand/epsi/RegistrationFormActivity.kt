@@ -2,14 +2,12 @@ package dev.munderstand.epsi
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
-import android.widget.Button
 
-class HomeActivity : BaseActivity() {
+class RegistrationFormActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_home)
+        setContentView(R.layout.activity_registration_form)
+        setHeaderTxt("Création de compte")
 
     }
-
 }

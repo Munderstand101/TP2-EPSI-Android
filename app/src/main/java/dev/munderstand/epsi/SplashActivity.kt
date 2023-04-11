@@ -12,7 +12,7 @@ class SplashActivity : AppCompatActivity() {
         setContentView(R.layout.activity_splash)
         Handler(Looper.getMainLooper()).postDelayed(Runnable {
             // ADD LOGIC FOR ACCOUNT OR NOT
-            val newIntent = Intent(application, HomeActivity::class.java)
+            val newIntent = Intent(application, SignInActivity::class.java)
             startActivity(newIntent)
             finish()
         }, 2000)
