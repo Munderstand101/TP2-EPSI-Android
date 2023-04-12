@@ -23,7 +23,7 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="textPersonName"
-            android:text="Nom" />
+            android:hint="Nom" />
 
         <EditText
             android:id="@+id/lastNameTextfield"
@@ -31,7 +31,7 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="textPersonName"
-            android:text="Prénom" />
+            android:hint="Prénom" />
 
         <EditText
             android:id="@+id/editTextTextEmailAddress"
@@ -39,7 +39,7 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="textEmailAddress"
-            android:text="Email"/>
+            android:hint="Email"/>
 
         <EditText
             android:id="@+id/editTextTextPostalAddress"
@@ -47,7 +47,7 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="textPostalAddress"
-            android:text="Adresse"/>
+            android:hint="Adresse"/>
 
         <EditText
             android:id="@+id/editTextTextPersonName2"
@@ -55,7 +55,7 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="number"
-            android:text="Code postal" />
+            android:hint="Code postal" />
 
         <EditText
             android:id="@+id/editTextTextPersonName3"
@@ -63,7 +63,7 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="textPersonName"
-            android:text="Ville" />
+            android:hint="Ville" />
 
 
 
@@ -73,7 +73,7 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="textPersonName"
-            android:text="Carte de fidélité" />
+            android:hint="Carte de fidélité" />
 
         <Button
             android:id="@+id/createFormButton"

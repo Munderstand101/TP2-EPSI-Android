@@ -12,32 +12,30 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
+    <RelativeLayout
+        android:id="@+id/fragmentContent"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
-        <Button
-            android:id="@+id/carteButton"
-            style="@style/Project_Button"
-            android:text="Cartes"
-            tools:layout_editor_absoluteX="133dp"
-            tools:layout_editor_absoluteY="200dp" />
+        <TextView
+            android:id="@+id/textViewTabMap"
+            style="@style/TabbarCell"
+            android:background="@color/teal_200"
+            android:text="Cartes" />
 
-        <Button
-            android:id="@+id/offerButton"
-            style="@style/Project_Button"
-            android:text="Offres "
-            tools:layout_editor_absoluteX="133dp"
-            tools:layout_editor_absoluteY="433dp" />
+        <TextView
+            android:id="@+id/textViewTabStore"
+            style="@style/TabbarCell"
+            android:background="@color/teal_700"
+            android:text="Magasins" />
 
-        <Button
-            android:id="@+id/storeButton"
-            style="@style/Project_Button"
-            android:text="Magasins "
-            tools:layout_editor_absoluteX="133dp"
-            tools:layout_editor_absoluteY="433dp" />
     </LinearLayout>
 
 
