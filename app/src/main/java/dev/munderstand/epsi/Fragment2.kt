@@ -1,10 +1,17 @@
 package dev.munderstand.epsi
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import okhttp3.*
+import org.json.JSONObject
+import java.io.IOException
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -20,6 +27,8 @@ class Fragment2 : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
+    val products = arrayListOf<Offers>()
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -29,12 +38,62 @@ class Fragment2 : Fragment() {
         }
     }
 
+
+
+
+
+
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_2, container, false)
+
+        val view = inflater.inflate(R.layout.activity_offer, container, false)
+
+        val recyclerView = view.findViewById<RecyclerView>(R.id.recyclerviewOffers)
+        recyclerView.layoutManager = LinearLayoutManager(activity)
+        val adapter = OffersAdapter(products,  requireContext())
+
+        recyclerView.adapter = adapter
+
+
+        val okHttpClient: OkHttpClient = OkHttpClient.Builder().build()
+        val request =
+            Request.Builder().url("https://www.ugarit.online/epsi/offers.json").cacheControl(CacheControl.FORCE_NETWORK).build()
+
+        okHttpClient.newCall(request).enqueue(object : Callback {
+            override fun onResponse(call: Call, response: Response) {
+                val data = response.body?.string()
+                if (data != null) {
+                    val jsOffers = JSONObject(data)
+                    val jsArrayOffers = jsOffers.getJSONArray("items")
+
+                    for (i in 0
+                            until jsArrayOffers.length()) {
+                        val jsOffer = jsArrayOffers.getJSONObject(i)
+                        val product = Offers(
+                            jsOffer.optString("name", "Not found"),
+                            jsOffer.optString("description", "Not found"),
+                            jsOffer.optString("picture_url", "Not found"),
+                        )
+                        products.add(product)
+                    }
+                    requireActivity().runOnUiThread(Runnable {
+                        adapter.notifyDataSetChanged()
+                    })
+                }
+            }
+
+            override fun onFailure(call: Call, e: IOException) {
+                requireActivity().runOnUiThread(Runnable {
+                })
+            }
+        })
+
+        return view
+
+
     }
 
     companion object {
