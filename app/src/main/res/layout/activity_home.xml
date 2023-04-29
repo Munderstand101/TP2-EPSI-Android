@@ -31,6 +31,12 @@
             android:text="Cartes" />
 
         <TextView
+            android:id="@+id/textViewOffer"
+            style="@style/TabbarCell"
+            android:background="@color/teal_700"
+            android:text="Offres" />
+
+        <TextView
             android:id="@+id/textViewTabStore"
             style="@style/TabbarCell"
             android:background="@color/teal_700"
