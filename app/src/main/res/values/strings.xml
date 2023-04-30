@@ -11,4 +11,25 @@
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="firstNameLabel">Nom</string>
+    <string name="firstNameHint">Nidal</string>
+    <string name="lastNameLabel">Prénom</string>
+    <string name="lastNameHint">DJEMAM</string>
+    <string name="emailLabel">Email</string>
+    <string name="emailHint">nidal_djemam@hotmail.com</string>
+    <string name="adressLabel">Adresse</string>
+    <string name="adressHint">1 Rue Victoire</string>
+    <string name="postalCodeLabel">Code postal</string>
+    <string name="postalCodeHint">33000</string>
+    <string name="cityLabel">Ville</string>
+    <string name="cityHint">Bordeaux</string>
+    <string name="reemLabel">Carte de fidélité</string>
+    <string name="reemHint">123456789</string>
+    <string name="btnCreateText">Créer le compte</string>
+    <string name="cartes">Cartes</string>
+    <string name="offres">Offres</string>
+    <string name="magasins">Magasins</string>
+    <string name="description">Description :</string>
+    <string name="adress">Adresse : </string>
+    <string name="saveUser">J\'enregistre les modifications</string>
 </resources>

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".HomeActivity"
+    tools:context=".common.HomeActivity"
     android:orientation="vertical">
 
     <include
@@ -25,24 +25,36 @@
         android:orientation="horizontal">
 
         <TextView
+            android:id="@+id/textViewTabCatres"
+            style="@style/TabbarCell"
+            android:textSize="16sp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:textColor="@android:color/black"
+            android:text="@string/cartes"
+            android:padding="10dp"
+            android:background="@drawable/border_dotted"/>
+
+        <TextView
+            android:id="@+id/textViewTabOffres"
+            style="@style/TabbarCell"
+            android:textSize="16sp"
+            android:layout_marginEnd="5dp"
+            android:textColor="@android:color/black"
+            android:text="@string/offres"
+            android:background="@drawable/border_dotted"/>
+
+        <TextView
             android:id="@+id/textViewTabMap"
             style="@style/TabbarCell"
-            android:background="@color/teal_200"
-            android:text="Cartes" />
-
-        <TextView
-            android:id="@+id/textViewOffer"
-            style="@style/TabbarCell"
-            android:background="@color/teal_700"
-            android:text="Offres" />
-
-        <TextView
-            android:id="@+id/textViewTabStore"
-            style="@style/TabbarCell"
-            android:background="@color/teal_700"
-            android:text="Magasins" />
+            android:textSize="16sp"
+            android:layout_marginEnd="5dp"
+            android:textColor="@android:color/black"
+            android:text="@string/magasins"
+            android:background="@drawable/border_dotted"/>
 
     </LinearLayout>
+
 
 
 </LinearLayout>
