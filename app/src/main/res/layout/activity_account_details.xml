@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".account.AccountDetailsActivity"
+        android:orientation="vertical">
+
+        <include
+            layout="@layout/layout_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:id="@+id/tv_firstName"
+                    style="@style/Theme.Base.TextView"
+                    android:text="@string/firstNameLabel" />
+                <EditText
+                    android:id="@+id/et_firstName"
+                    style="@style/Theme.Base.EditText"
+                    android:hint="@string/firstNameHint"
+                    android:inputType="textPersonName" />
+
+                <TextView
+                    android:id="@+id/tv_lastName"
+                    style="@style/Theme.Base.TextView"
+                    android:text="@string/lastNameLabel" />
+                <EditText
+                    android:id="@+id/et_lastName"
+                    style="@style/Theme.Base.EditText"
+                    android:hint="@string/lastNameHint"
+                    android:inputType="textPersonName" />
+
+                <TextView
+                    android:id="@+id/tv_email"
+                    style="@style/Theme.Base.TextView"
+                    android:text="@string/emailLabel" />
+                <EditText
+                    android:id="@+id/et_email"
+                    style="@style/Theme.Base.EditText"
+                    android:hint="@string/emailHint"
+                    android:inputType="textEmailAddress" />
+
+                <TextView
+                    android:id="@+id/tv_adress"
+                    style="@style/Theme.Base.TextView"
+                    android:text="@string/adressLabel"/>
+                <EditText
+                    android:id="@+id/et_adress"
+                    style="@style/Theme.Base.EditText"
+                    android:hint="@string/adressHint"
+                    android:inputType="textPostalAddress" />
+
+                <TextView
+                    android:id="@+id/tv_postalCode"
+                    style="@style/Theme.Base.TextView"
+                    android:text="@string/postalCodeLabel" />
+                <EditText
+                    android:id="@+id/et_postalCode"
+                    style="@style/Theme.Base.EditText"
+                    android:hint="@string/postalCodeHint"
+                    android:inputType="number" />
+
+                <TextView
+                    android:id="@+id/tv_city"
+                    style="@style/Theme.Base.TextView"
+                    android:text="@string/cityLabel"/>
+                <EditText
+                    android:id="@+id/et_city"
+                    style="@style/Theme.Base.EditText"
+                    android:hint="@string/cityHint"
+                    android:inputType="textPersonName" />
+
+                <TextView
+                    android:id="@+id/tv_reem"
+                    style="@style/Theme.Base.TextView"
+                    android:text="@string/reemLabel" />
+                <EditText
+                    android:id="@+id/et_reem"
+                    style="@style/Theme.Base.EditText"
+                    android:hint="@string/reemHint"
+                    android:inputType="textPersonName" />
+
+
+                <Button
+                    android:id="@+id/createFormButton"
+                    style="@style/Theme.Base.Button"
+                    android:layout_width="371dp"
+                    android:layout_height="87dp"
+                    android:text="@string/saveUser" />
+
+            </LinearLayout>
+
+        </ScrollView>
+
+
+    </LinearLayout>
