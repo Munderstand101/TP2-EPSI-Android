@@ -74,4 +74,9 @@ dependencies {
 
     //Library to get URL Meta Data
     implementation 'org.jsoup:jsoup:1.13.1'
+
+    implementation 'com.squareup.picasso:picasso:+'
+    implementation("com.squareup.okhttp3:okhttp:4.9.0")
+    implementation 'com.google.android.gms:play-services-maps:18.0.1'
+
 }
