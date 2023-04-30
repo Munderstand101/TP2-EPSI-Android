@@ -3,6 +3,7 @@ package dev.munderstand.epsi
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.Button
 import android.widget.TextView
@@ -13,7 +14,7 @@ class HomeActivity : BaseActivity() {
 
     val tab1Fragment = Fragment1.newInstance("", "")
     val tab2Fragment = Fragment2.newInstance("", "")
-    val tab3Fragment = Fragment2.newInstance("", "")
+    val tab3Fragment = Fragment3.newInstance("", "")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
@@ -27,8 +28,7 @@ class HomeActivity : BaseActivity() {
         showBack()
 
         textViewTab1.setOnClickListener(View.OnClickListener {
-            val intent = Intent(application, OfferActivity::class.java)
-            startActivity(intent)
+           showTab1()
         })
         textViewTab2.setOnClickListener(View.OnClickListener {
             showTab2()
