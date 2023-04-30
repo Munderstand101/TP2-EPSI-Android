@@ -2,44 +2,57 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
 
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/epsi_icon"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/Theme.EPSIAndroid"
+        android:theme="@style/Theme.Base"
         tools:targetApi="31">
         <activity
-            android:name=".AccueilActivity"
+            android:name=".account.AccountDetailsActivity"
             android:exported="false" />
         <activity
-            android:name=".QrCodeScanActivity"
+            android:name=".account.StoreDetailsActivity"
+            android:exported="false" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyAdwxyyyZSkEgW97DZxS6ev2KRpruYeTlQ" />
+
+
+        <activity
+            android:name=".registration.QRCodeScannerActivity"
             android:exported="false"
             android:label="@string/title_activity_qr_code_scan"
             android:theme="@style/Theme.EPSIAndroid.NoActionBar" />
         <activity
-            android:name=".RegistrationFormActivity"
+            android:name=".registration.RegistrationFormActivity"
             android:exported="false" />
         <activity
-            android:name=".SignInActivity"
+            android:name=".registration.SignInActivity"
             android:exported="false" />
         <activity
-            android:name=".SplashActivity"
-            android:exported="true">
+            android:name=".common.HomeActivity"
+            android:exported="true" />
+        <activity
+            android:name=".common.SplashActivity"
+            android:exported="true"
+            android:theme="@style/Theme.Splash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".HomeActivity"
-            android:exported="true" />
     </application>
 
 </manifest>
